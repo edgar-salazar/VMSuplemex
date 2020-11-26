@@ -34,16 +34,22 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="navbar- mr-auto">
-                            <a href="/admin/" class="nav-link" style="color: #ffc000; font-size: 16px;">Inicio</a>
+                            <a href="/admin" class="nav-link" style="color: #ffc000; font-size: 16px;">Inicio</a>
                         </li>
                         <li class="navbar- mr-auto">
-                            <a href="/admin/productos/" class="nav-link" style="color: #ffc000; font-size: 16px;">Productos</a>
+                            <a href="/admin/productos" class="nav-link" style="color: #ffc000; font-size: 16px;">Productos</a>
                         </li>
                         <li class="navbar- mr-auto">
-                            <a href="/admin/contacto/" class="nav-link" style="color: #ffc000; font-size: 16px;">Contacto</a>
+                            <a href="/admin/cotizacion" class="nav-link" style="color: #ffc000; font-size: 16px;">Cotización</a>
                         </li>
                         <li class="navbar- mr-auto">
-                            <a href="/admin/nosotros/" class="nav-link" style="color: #ffc000; font-size: 16px;">Acerca de Nosotros</a>
+                            <a href="/admin/contacto" class="nav-link" style="color: #ffc000; font-size: 16px;">Contacto</a>
+                        </li>
+                        <li class="navbar- mr-auto">
+                            <a href="/admin/nosotros" class="nav-link" style="color: #ffc000; font-size: 16px;">Nosotros</a>
+                        </li>
+                        <li class="navbar- mr-auto">
+                            <a href="/admin/usuarios" class="nav-link" style="color: #ffc000; font-size: 16px;">Usuarios</a>
                         </li>
                         
                     </ul>
@@ -65,22 +71,21 @@
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <div class="dropdown-menu dropdown-menu-right" style="background-color: #330d69" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" style="color: white;" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
+                                    <a class="dropdown-item" style="color: white;" href="{{url('/')}}">Regresar</a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>
+                                
                             </li>
                         @endguest
-                        <li class="navbar- mr-auto">
-                            <a href="/" class="nav-link" style="color: white;">Regresar</a>
-                        </li>
                     </ul>
                 </div>
             </div>

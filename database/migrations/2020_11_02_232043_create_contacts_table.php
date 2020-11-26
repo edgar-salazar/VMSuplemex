@@ -21,13 +21,12 @@ class CreateContactsTable extends Migration
             $table->string('region')->nullable();
             $table->string('ope')->nullable();
             $table->string('clo')->nullable();
-            $table->string('phone')->nullable();
-            $table->string('cellphone')->nullable();
-            $table->string('mail')->nullable();
-            $table->string('facebook')->nullable();
-            $table->string('map')->nullable();
-            $table->string('name')->nullable();
-            $table->string('avatar')->nullable();
+            /**$table->string('phone')->nullable();
+            /**$table->string('cellphone')->nullable(); */
+            /**$table->string('mail')->nullable(); */
+            /**$table->string('facebook')->nullable(); */
+            /**$table->string('avatar')->nullable(); */
+            $table->text('map')->nullable();
             $table->timestamps();
         });
     }

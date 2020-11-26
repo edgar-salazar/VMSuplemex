@@ -1,5 +1,5 @@
 @extends('adminlte::page')
-@section('title', 'Productos')
+@section('title', 'Usuarios')
     
 @section('css')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
@@ -9,38 +9,29 @@
 @endsection
 
 @section('content')
-    <h1>Productos</h1>
-    <a href="{{route('Productos.Create')}}" type="button" class="btn btn-success">Agregar nuevo producto</a>
+    <h1>Usuarios</h1>
     <br>
     <div class="card">
         <div class="card-body">
-            <table class="table table-striped" id="productos">
+            <table class="table table-striped" id="usuarios">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Nombre</th>
-                        <th>Marca</th>
-                        <th>Cantidad</th>
-                        <th>Categoría</th>
-                        <th>Precio Venta</th>
-                        <th>Precio Compra</th>
+                        <th>Correo</th>
                         <th>Opciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($products as $product)
+                    @foreach($users as $user)
                     <tr>
-                        <td>{{$product->id}}</td>
-                        <td>{{$product->nombre}}</td>
-                        <td>{{$product->marca}}</td>
-                        <td>{{$product->cantidad}}</td>
-                        <td>{{$product->categoria}}</td>
-                        <td>${{$product->precio_venta}}</td>
-                        <td>${{$product->precio_compra}}</td>
+                        <td>{{$user->id}}</td>
+                        <td>{{$user->name}}</td>
+                        <td>{{$user->email}}</td>
                         <td>
-                            <a href="{{route('Productos.Show', $product)}}" type="button" class="btn btn-info"><i class="fas fa-info-circle"></i></a>
-                            <a href="{{route('Productos.Edit', $product)}}" type="button" class="btn btn-warning"><i class="fas fa-edit"></i></a>
-                            <a href="{{route('Productos.Delete', $product)}}" type="button" class="btn btn-danger"><i class="fas fa-trash"></i></a>
+                            <a href="{{route('Usuarios.Show', $user)}}" type="button" class="btn btn-info"><i class="fas fa-info-circle"></i></a>
+                            <a href="{{route('Usuarios.Edit', $user)}}" type="button" class="btn btn-warning"><i class="fas fa-edit"></i></a>
+                            <a href="{{route('Usuarios.Delete', $user)}}" type="button" class="btn btn-danger"><i class="fas fa-trash"></i></a>
                         </td>
                     </tr>
                     @endforeach  
@@ -66,7 +57,7 @@
     <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.colVis.min.js"></script>
     <script>
         $(document).ready(function() {
-        var table = $('#productos').DataTable( {
+        var table = $('#useros').DataTable( {
             responsive: true,
             autoWidth: false,
             "language": {
@@ -132,7 +123,7 @@
         } );
     
         table.buttons().container()
-            .appendTo( '#productos_wrapper .col-md-6:eq(0)' );
+            .appendTo( '#useros_wrapper .col-md-6:eq(0)' );
         } );
     </script>
 @endsection

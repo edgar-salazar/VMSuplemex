@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center">
-            <h1>Informacion de contacto</h1>
+            <h1>Información de contacto</h1>
         </div>
     </div>
 @foreach ($contacts as $contact)
@@ -34,14 +34,7 @@
                         <br>
                         {{$contact->clo}}
                     </p>
-                    <p class="card-text"><strong>Telefono: </strong>{{$contact->phone}}</p>
-                    <p class="card-text"><strong>Celular: </strong>{{$contact->cellphone}}</p>
-                    <p class="card-text"><strong>Correo: </strong>
-                        <a href="mailto:{{$contact->mail}}" class="card-link">{{$contact->mail}}</a>
-                    </p>
-                    <p class="card-text"><strong>Facebook: </strong>
-                        <a href="{{$contact->facebook}}" class="card-link">{{$contact->facebook}}</a>
-                    </p>
+                    
                 </div>
             </div>
         </div>
