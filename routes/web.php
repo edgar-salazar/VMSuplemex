@@ -2,6 +2,8 @@
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Models\User;
+use App\Models\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,6 +71,25 @@ Route::put('admin/usuario/{user}', [App\Http\Controllers\Admin\UserController::c
 
 Route::get('admin/usuario/eliminar/{user}', [App\Http\Controllers\Admin\UserController::class, 'Delete'])->name('Usuarios.Delete');
 Route::delete('admin/usuario/{user}', [App\Http\Controllers\Admin\UserController::class, 'Destroy'])->name('Usuarios.Destroy');
+
+Route::get('/test', function(){
+
+    /**
+     *  Return Role::create([
+        'name'=>'Admin',
+        'slug'=>'admin',
+        'description'=>'Administrator',
+        'full-access'=>'yes'
+    ]);
+     */
+    Return Role::create([
+        'name'=>'Guest',
+        'slug'=>'guest',
+        'description'=>'Guest',
+        'full-access'=>'no'
+    ]);
+
+});
 
 //Auth
 Auth::routes();

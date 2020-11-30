@@ -41,6 +41,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function roles(){
+        return $this->belongsToMany('App\Models\Role')->withTimestamps();
+    }  
+
     public function adminlte_image(){
 
         return 'https://picsum.photos/300/300';
@@ -58,4 +62,6 @@ class User extends Authenticatable
         return 'profile/username';
 
     }
+
+   
 }

@@ -96,37 +96,52 @@
                     extend: 'copy',
                     text: '<i class="fas fa-copy"></i>',
                     titleAttr: 'Copiar',
-                    className: 'btn btn-secondary'
+                    className: 'btn btn-secondary',
+                    exportOptions: {
+                    columns: ':visible'
+                    },
                 },
                 {
                     extend: 'excelHtml5',
                     text: '<i class="fas fa-file-excel"></i>',
                     titleAttr: 'Exportar a Excel',
-                    className: 'btn btn-success'
+                    className: 'btn btn-success',
+                    exportOptions: {
+                    columns: ':visible'
+                    },
                 },
                 {
                     extend: 'pdfHtml5',
                     text: '<i class="fas fa-file-pdf"></i>',
                     titleAttr: 'Exportar a PDF',
-                    className: 'btn btn-success'
+                    className: 'btn btn-success',
+                    exportOptions: {
+                    columns: ':visible'
+                    },
                 },
                 {
                     extend: 'csvHtml5',
                     text: '<i class="fas fa-file-csv"></i>',
                     titleAttr: 'Exportar a CSV',
-                    className: 'btn btn-success'
+                    className: 'btn btn-success',
+                    exportOptions: {
+                    columns: ':visible'
+                    },
                 },
                 {
                     extend: 'print',
                     text: '<i class="fas fa-print"></i>',
                     titleAttr: 'Imprimir',
-                    className: 'btn btn-info'
+                    className: 'btn btn-info',
+                    exportOptions: {
+                    columns: ':visible'
+                    },
                 },
                 {
                     extend: 'colvis',
                     text: '<i class="fas fa-eye-slash"></i>',
                     titleAttr: 'Ocultar',
-                    className: 'btn btn-primary'
+                    className: 'btn btn-primary',
                 }
             ]
         } );
